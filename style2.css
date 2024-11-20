@@ -1,0 +1,531 @@
+@media screen and (min-width:1070px) {
+
+    *,
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        scroll-behavior: smooth;
+        box-sizing: border-box;
+    }
+
+    .animate__animated.animate__fadeIn {
+        --animate-duration: 1.5s;
+    }
+
+    .animate__animated.animate__fadeInUp {
+        --animate-duration: 1s;
+    }
+
+    .animate__animated.animate__fadeInDown {
+        --animate-duration: 0.7s;
+    }
+
+    .animate__animated.animate__zoomIn {
+        --animate-duration: 1s;
+    }
+
+    .background {
+        background-color: #F8F8F8;
+    }
+
+    :root {
+        --teal: #257180;
+    }
+
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        translate: 0 50px;
+        gap: 1rem;
+    }
+
+
+    .judul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Kanit", sans-serif;
+        position: relative;
+        color: black;
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin: 2rem;
+        padding-top: 9vh;
+
+    }
+
+    .judul::after {
+        content: "";
+        position: absolute;
+        background: var(--teal);
+        height: 2px;
+        width: 150%;
+        translate: 0 1.5rem;
+    }
+
+    .judullogo {
+        width: 5rem;
+        height: 5rem;
+        margin-bottom: 2rem;
+    }
+
+    /* NAVBAR */
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 45px;
+        position: fixed;
+        background-color: var(--teal);
+        top: 0;
+        display: none;
+
+    }
+
+    #close {
+        display: none;
+    }
+
+    #navbar {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        position: fixed;
+        width: 100%;
+        height: 9vh;
+        background-color: #f9f9f9;
+        top: 0;
+        right: 0;
+        box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.75);
+        z-index: 9;
+    }
+
+    .wrapper {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        position: absolute;
+        width: 300px;
+        height: 100%;
+        gap: 1rem;
+        left: 0;
+        padding-left: 1rem;
+    }
+
+    #navbar img {
+        width: 3rem;
+        height: 3rem;
+
+    }
+
+    #navbar p {
+        font-family: "Kanit", sans-serif;
+        color: black;
+        font-size: 1rem;
+        font-weight: 550;
+        translate: 0 7px;
+    }
+
+    .ul {
+        translate: 0 7px;
+        padding: 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 2rem;
+        list-style-type: none;
+        text-decoration: none;
+        color: black;
+    }
+
+    .ul a {
+        font-weight: 600;
+        font-size: 1rem;
+        text-decoration: none;
+        color: black;
+    }
+
+    .ul a:hover {
+        color: rgb(46, 45, 45);
+        text-decoration: underline;
+        text-decoration-color: black;
+    }
+
+    .ul a:active {
+        transform: scale(0.9);
+    }
+
+    /* HOME */
+
+    .carousel {
+        width: 80%;
+        box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+    }
+
+    .homepage h1 {
+        margin-top: 2rem;
+        font-family: "Kanit", sans-serif;
+        text-align: center;
+        font-size: 2rem;
+        color: var(--teal);
+    }
+
+    .homepage p {
+        text-align: center;
+        font-size: 1rem;
+        padding: 0.3rem;
+    }
+
+    .agenda {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--teal);
+        color: white;
+        font-size: 1rem;
+        border-radius: 8px;
+        padding: 10px;
+        margin-top: 2rem;
+        height: 40px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: 0.2s;
+        box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+    }
+
+    .agenda:hover {
+        background-color: rgb(3, 99, 99);
+        transform: scale(1.1);
+        transition: ease-in-out .2s;
+    }
+
+    .agenda:active {
+        transform: scale(0.95);
+    }
+
+    /* JADWAL SHOLAT */
+
+    .quotes {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 80%;
+        height: 14rem;
+        color: black;
+    }
+
+
+    .quotes h1 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .quotes p {
+        font-size: 1.3rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .QS {
+        margin-bottom: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .jadwal {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+    }
+
+    /* INFAQ */
+
+    .dalil {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        text-align: center;
+        width:80%;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        color: black;
+    }
+
+    .dalil h1 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
+
+    .dalil p {
+        font-size: 1.3rem;
+    }
+
+    .infaqonline {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--teal);
+        color: white;
+        font-size: 1rem;
+        border-radius: 8px;
+        padding: 10px;
+        height: 40px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: 0.2s;
+        box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+    }
+
+    .infaqonline:hover {
+        background-color: rgb(3, 99, 99);
+        transform: scale(1.05);
+        transition: ease-in-out .2s;
+    }
+
+    .infaqonline:active {
+        transform: scale(0.9);
+    }
+
+    .qris {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+    }
+
+    .openqris {
+        position: relative;
+        width: 350px;
+        height: 350px;
+        box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+    }
+
+    .closeqris {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 30px;
+        height: 30px;
+        padding: 3px;
+    }
+
+    .closeqris:hover{
+        transform: scale(1.1);
+    }
+
+    .closeqris:active {
+        transform: scale(0.95);
+    }
+
+    .kas-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--teal);
+        color: white;
+        font-size: 1rem;
+        border-radius: 8px;
+        padding: 10px;
+        height: 40px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: 0.2s;
+        box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+    }
+
+    .kas-btn:hover {
+        background-color: rgb(3, 99, 99);
+        transform: scale(1.05);
+        transition: ease-in-out .2s;
+    }
+
+    .kas-btn:active {
+        transform: scale(0.9);
+    }
+
+    .kas {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        height: auto;
+        position: relative;
+        width: 80%;
+        height: auto;
+    }
+
+    .openkas {
+        position: relative;
+        width: 70%;
+        height: 80vh;
+        
+    }
+
+    .closekas {
+        position: absolute;
+        padding: 3px;
+        top: 6px;
+        right: 160px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .closekas:hover {
+        transform: scale(1.1);
+    }
+
+    .closekas:active {
+        transform: scale(0.95);
+    }
+
+    /* FASILITAS */
+
+    .card {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        width: 20rem;
+        min-height: 10rem;
+        background-color: white;
+        border-radius: 100px;
+        border: 1px solid black;
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+        box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+    }
+
+    .card h1 {
+        color: var(--teal);
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+
+    .card p {
+        color: black;
+        font-size: 1rem;
+    }
+
+    .grid {
+        display: flex;
+        flex: 1 1 0;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+        gap: 1rem;
+        
+    }
+
+    /* KONTAK DKM */
+
+    table {
+        width: 80%;
+        border: 1px solid black;
+        box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+    }
+
+    td, th{
+        width: 100px;
+        padding: 0.5rem;
+        border: 1px solid black;
+    }
+
+    /* FOOTER */
+
+    .footer-content {
+        margin-top: 1rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        background-color: white;
+    }
+
+    .footer-content h1 {
+        color: var(--teal);
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    .footer-content p {
+        text-align: center;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        color: black;
+        font-size: 1rem;
+    }
+
+    .img-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .footer-content img {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .footer-content img:hover {
+        transform: scale(1.2);
+        transition: ease-in-out .2s;
+    }
+
+    .footer-content img:active {
+        transform: scale(0.95);
+        transition: ease-in-out .2s;
+    }
+
+    p.copyright {
+        margin-top: 1rem;
+        font-size: 1rem;
+        color: rgb(79, 77, 77);
+    }
+}
