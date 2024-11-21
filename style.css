@@ -98,7 +98,7 @@ nav {
 nav p {
     position: relative;
     font-family: "Kanit", sans-serif;
-    translate: 0 35%;
+    translate: -7px 35%;
     font-size: 1rem;
     font-weight: 500;
 }
