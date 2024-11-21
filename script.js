@@ -3,7 +3,7 @@ let menu = document.getElementById("menu")
 let close = document.getElementById("close")
 let navbar = document.getElementById("navbar")
 let home = document.querySelector(".home")
-let maxwidth = 800
+let maxwidth = 900
 let windowWidth = innerWidth
 
 
