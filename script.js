@@ -1,59 +1,884 @@
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family:sans-serif;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
 
-let menu = document.getElementById("menu")
-let close = document.getElementById("close")
-let navbar = document.getElementById("navbar")
-let home = document.querySelector(".home")
-let maxwidth = 900
-let windowWidth = innerWidth
+.animate__animated.animate__fadeIn {
+    --animate-duration: 1.5s;
+}
+
+.animate__animated.animate__fadeInUp {
+    --animate-duration: 1s;
+}
+
+.animate__animated.animate__fadeInDown {
+    --animate-duration: 0.7s;
+}
+
+.background {
+    background-color: #F8F8F8;
+    padding: 0;
+}
+
+:root {
+    --teal: #257180;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    translate: 0 50px;
+    gap: 1rem;
+}
+
+.judul {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 1.2rem;
+    width: auto;
+    height: auto;
+    margin-bottom: 2rem;
+    font-family: "Kanit", sans-serif;
+    padding-top: 55px;
+}
+
+.judul::after {
+    content: "";
+    position: absolute;
+    background: var(--teal);
+    height: 2px;
+    width: 150%;
+    translate: 0 0.9rem;
+}
+
+.judullogo {
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 2rem;
+}
+
+/* NAVBAR */
+nav {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 45px;
+    background-color: #f9f9f9;
+    top: 0;
+    color: black;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.75);
+    z-index: 999;
+
+}
+
+#logo {
+    position: relative;
+    left: 0.7rem;
+    width: 2rem;
+    height: 2rem;
+    filter: drop-shadow(1px 2px 2px black);
+
+}
+
+nav p {
+    position: relative;
+    font-family: "Kanit", sans-serif;
+    translate: -7px 35%;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.home {
+    translate: -50px -2px;
+    width: 1.3rem;
+    height: 1.3rem;
+    transition: .2s ease-in-out;
+
+}
+
+.home:hover {
+    transform: scale(1.1);
+    transition: ease-in-out .2s;
+}
+
+.home:active {
+    transform: scale(0.9);
+    transition: ease-in-out .2s;
+}
 
 
-menu.addEventListener("click", function () {
-    navbar.style.display = "flex"
-    menu.style.display = "none"
-    close.style.display = "flex"
-})
-close.addEventListener("click", function () {
-    navbar.style.display = "none"
-    menu.style.display = "flex"
-    close.style.display = "none"
-})
+#menu {
+    position: absolute;
+    display: flex;
+    right: 1rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    transition: .2s ease-in-out;
+}
 
-navbar.addEventListener("click", function (e) {
-    if (e.target.tagName === "A" && windowWidth <= maxwidth) {
-        navbar.style.display = "none"
-        menu.style.display = "flex"
-        close.style.display = "none"
+#menu:hover {
+    transform: scale(1.1);
+}
+
+#menu:active {
+    transform: scale(0.9);
+}
+
+#close {
+    position: absolute;
+    display: none;
+    right: 1rem;
+    width: 1.1rem;
+    height: 1.1rem;
+    transition: .2s ease-in-out;
+}
+
+#close:hover {
+    transform: scale(1.1);
+}
+
+#close:active {
+    transform: scale(0.9);
+}
+
+#navbar {
+    right: 0;
+    position: fixed;
+    display: flex;
+    justify-content: flex-start;
+    height: 100vh;
+    translate: 0 45px;
+    background-color: #F9F9F9;
+    width: 60%;
+    padding: 1rem;
+    z-index: 998;
+    display: none;
+}
+
+.wrapper {
+    display: none;
+}
+
+#navbar img {
+    display: none;
+}
+
+#navbar p {
+    display: none;
+}
+
+.ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    list-style-type: none;
+    text-decoration: none;
+    color: black;
+}
+
+.ul a {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 0.9rem;
+    translate: 0.5rem;
+}
+
+.ul a:active {
+    transform: scale(0.9);
+    transition: .2s ease-in-out;
+}
+
+.ul a::before {
+    translate: -2.5rem -2px;
+    content: '';
+    position:absolute;
+    left: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-position: center;
+    background-size:cover;
+}
+
+.homenav::before {
+    background-image: url(images/home.png);
+}
+
+.jadwals::before {
+    background-image: url(images/jadwal.png);
+}
+
+.jadwalk::before {
+    background-image: url(images/kajian.png);
+}
+
+.infaqnav::before {
+    background-image: url(images/infaq.png);
+}
+
+.fasilitasnav::before {
+    background-image: url(images/layanan.png);
+}
+.kotaknav::before {
+    background-image: url(images/phone.png);
+}
+.medianav::before {
+    background-image: url(images/instagram.png);
+}
+
+
+/* HOME */
+
+.carousel {
+    width: 90%;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.homepage h1 {
+    margin-top: 1rem;
+    font-family: "Kanit", sans-serif;
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--teal);
+}
+
+.homepage p {
+    text-align: center;
+    font-size: 0.7rem;
+    width: 90%;
+}
+
+.homepage .countdown {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 80%;
+    gap:-.5rem;
+    background-color;
+}
+
+.homepage .countdown-p {
+    font-size: 3rem;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #257180;
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    padding: 1rem;
+    color: white;
+    box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.75);
+}
+
+.homepage .cd-p {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-family: "Kanit", sans-serif;
+    position: relative;
+} 
+
+.homepage .cd-p::after {
+    content: "";
+    position: absolute;
+    background: var(--teal);
+    height: 2px;
+    width: 150%;
+    translate: 0 0.9rem;
+}
+
+.homepage .cd-doa {
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.homepage .arti {
+    font-size: 1rem;
+}
+
+
+.agenda {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    background-color: var(--teal);
+    color: white;
+    font-size: 0.8rem;
+    border-radius: 8px;
+    padding: 10px;
+    height: 35px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+    box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.75);
+}
+
+.agenda:active {
+    transform: scale(0.95);
+    transition: ease-in-out .2s;
+}
+
+/* JADWAL SHOLAT */
+
+.quotes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+    height: 14rem;
+    color: black;
+}
+
+
+.quotes h1 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.quotes p {
+    font-size: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.QS {
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.jadwal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+/* INFAQ */
+
+.dalil {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+    padding: 1rem;
+    font-size: 1rem;
+    color: black;
+    margin-bottom: 1rem;
+}
+
+.dalil h1 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.infaqonline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--teal);
+    color: white;
+    font-size: 0.8rem;
+    border-radius: 8px;
+    padding: 10px;
+    height: 35px;
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+    transition: 0.2s;
+    border: none;
+    box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.75);
+}
+
+.infaqonline:active {
+    transform: scale(0.9);
+}
+
+.qris {
+    position: relative;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    height: 280px;
+    z-index: 1;
+}
+
+.openqris {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.75);
+}
+
+.closeqris {
+    position: absolute;
+    background-color: rgb(212, 204, 204);
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+}
+
+.kas-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--teal);
+    color: white;
+    font-size: 0.8rem;
+    border-radius: 8px;
+    padding: 10px;
+    height: 35px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.2s;
+    border: none;
+    box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.75);
+}
+
+.kas-btn:active {
+    transform: scale(0.9);
+}
+
+.kas {
+    position: relative;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: auto;
+}
+
+.openkas {
+    background-image: url(images/laporan.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    padding-top: 89%;
+
+}
+
+.closekas {
+    background-color: rgb(212, 204, 204);
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+}
+
+/* FASILITAS */
+
+.grid {
+    display: flex;
+    flex: 1 1 0;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    gap: 1rem;
+
+}
+
+.card {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: white;
+    width: 20rem;
+    min-height: 10rem;
+    border-radius: 1rem;
+    border: 1px solid black;
+    padding: 1rem;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.card h1 {
+    color: var(--teal);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.card p {
+    color: black;
+    font-size: 1rem;
+}
+
+/* KONTAK DKM */
+
+
+
+table {
+    width: 80%;
+    background-color: white;
+    border: 1px solid black;
+    margin-bottom: 2rem;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+th,
+td {
+    font-size: 1rem;
+    width: 100px;
+    padding: 0.5rem;
+    border: 1px solid black;
+}
+
+
+/* FOOTER */
+
+.footer-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+    background-color: white;
+    border-top: 1px solid black;
+}
+
+.footer-content h1 {
+    color: var(--teal);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.footer-content p {
+    text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: black;
+    font-size: 0.8rem;
+}
+
+.img-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-content img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+p.copyright {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: rgb(79, 77, 77);
+}
+
+/* TABLET / BIG PHONE */
+
+@media screen and (min-width: 900px) {
+
+    section {
+        width: 80%;
+        translate: 25%;
+        margin-bottom: 1.5rem;
     }
-});
 
-home.addEventListener("click", function () {
-    navbar.style.display = "none"
-    menu.style.display = "flex"
-    close.style.display = "none"
-})
+    .judul {
+        padding-top: 0;
+        margin-top: 2rem;
+    }
 
-let infaqonline = document.querySelector (".infaqonline")
-let qris = document.querySelector(".qris")
-let closeqris = document.querySelector(".closeqris")
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        width: 20%;
+        height: 7svh;
+        background-color: var(--teal);
+        color: white;
+        z-index: 2;
+        box-shadow: 3px 1px 3px 0px rgba(0, 0, 0, 1);
+        -webkit-box-shadow: 3px 1px 3px 0px rgba(0, 0, 0, 1);
+        -moz-box-shadow: 3px 1px 3px 0px rgba(0, 0, 0, 1);
+    }
+
+    #logo {
+        position: relative;
+        width: 2rem;
+        height: 2rem;
+    }
+
+    nav p {
+        display: block;
+        position: relative;
+        translate: 0 7px;
+        font-weight: 500;
+        font-size: 0.8rem;
+    }
+
+    #close {
+        display: none;
+    }
+
+    .home {
+        display: none;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        position: fixed;
+        left: 0;
+        width: 20%;
+        height: 93svh;
+        background-color: #f9f9f9;
+        border: none;
+        z-index: 1;
+        translate: 0 7svh;
+        box-shadow: 3px 1px 3px 0px rgba(0, 0, 0, 1);
+        -webkit-box-shadow: 3px 1px 3px 0px rgba(0, 0, 0, 1);
+        -moz-box-shadow: 3px 1px 3px 0px rgba(0, 0, 0, 1);
+    }
+
+    .ul {
+        position: relative;
+        width: 100%;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 2rem;
+        list-style-type: none;
+        text-decoration: none;
+        color: black;
+    }
+
+    .ul a {
+        font-weight: 600;
+        font-size: 0.9rem;
+        text-decoration: none;
+        color: black;
+        translate: 1.5rem 2px;
+    }
+
+    .ul a:active {
+        transform: scale(0.8);
+        color: blue;
+        transition: ease-in-out.3s;
+    }
+
+    .carousel {
+        width: 80%;
+        box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+    }
+
+    .homepage h1 {
+        margin-top: 1rem;
+        font-size: 1.5rem;
+    }
+
+    .homepage p {
+        font-size: 0.8rem;
+    }
+
+    .agenda {
+        transform: scale(1.2);
+    }
+
+    .agenda:hover {
+        transform: scale(1.3);
+        transition: ease-in-out .2s;
+        background-color: rgb(3, 99, 99);
+    }
+
+    .agenda:active {
+        transform: scale(1.1);
+        transition: ease-in-out .2s;
+    }
 
 
-infaqonline.addEventListener("click", function() {
-    qris.style.display = "block"
-})
+    .infaqonline {
+        transform: scale(1.2);
+    }
 
-closeqris.addEventListener("click", function() {
-    qris.style.display = "none"
-})
+    .infaqonline:hover {
+        transform: scale(1.3);
+        transition: ease-in-out .2s;
+        background-color: rgb(3, 99, 99);
+    }
+
+    .infaqonline:active {
+        transform: scale(1.1);
+        transition: ease-in-out .2s;
+    }
+
+    .qris {
+        margin: 1rem;
+    }
+
+    .kas-btn {
+        transform: scale(1.2);
+    }
 
 
-let kasbtn = document.querySelector (".kas-btn")
-let kas =  document.querySelector (".kas")
-let closekas =  document.querySelector (".closekas")
+    .kas-btn:hover {
+        transform: scale(1.3);
+        transition: ease-in-out .2s;
+        background-color: rgb(3, 99, 99);
+    }
 
-kasbtn.addEventListener("click", function() {
-    kas.style.display = "flex"
-})
+    .kas-btn:active {
+        transform: scale(1.1);
+        transition: ease-in-out .2s;
+    }
 
-closekas.addEventListener("click", function() {
-    kas.style.display = "none"
-})
+    .kas {
+        position: relative;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        margin-top: 1rem;
+    }
+
+    .openkas {
+        background-image: url(images/laporan.jpg);
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        padding-top: 89%;
+    }
+
+    .closekas {
+        top: 0;
+    }
+}
+
+
+/* DESKTOP */
+
+@media screen and (min-width: 1250px) {
+    nav {
+        height: 8svh;
+        width: 18%;
+        z-index: 10;
+        justify-content: space-between;
+    }
+
+    #navbar {
+        left: 0;
+        width: 18%;
+        height: 92svh;
+        translate: 0 8svh;
+    }
+
+    #logo {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    nav p {
+        font-size: 0.9em;
+    }
+
+    .ul {
+        padding-top: 1rem;
+        gap: 0.250;
+        width: 120%;
+    }
+
+    .ul a {
+        display: flex;
+        justify-content: flex-start;
+        width: 70%;
+        height: 2.5rem;
+        padding: 3px;
+        font-size: 1rem;
+        translate: 3rem 2px;
+    }
+
+    .ul a:hover {
+        text-decoration: none;
+        transform: scale(1.05);
+        color:blue;
+        border-radius: 10px;
+        transition: ease-in-out .25s;
+    }
+
+    .ul a:active {
+        transform: scale(0.9);
+    }
+
+    section {
+        width: 82%;
+        translate: 22%;
+    }
+
+    .card {
+        min-height: 12rem;
+    }
+}
