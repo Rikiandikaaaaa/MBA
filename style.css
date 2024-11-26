@@ -278,12 +278,11 @@ nav p {
 }
 
 .homepage .countdown-p {
-    font-size: 3rem;
+    font-size: 1.5rem;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #257180;
-    border-radius: 100%;
-    width: 100px;
-    height: 100px;
+    width: max-content;
+    border-radius:25%;
     padding: 1rem;
     color: white;
     box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.75);
