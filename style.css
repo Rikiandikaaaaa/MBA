@@ -196,7 +196,7 @@ nav p {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-decoration: none;
     color: black;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 0.9rem;
     translate: 0.5rem;
 }
@@ -306,7 +306,7 @@ nav p {
     position: absolute;
     background: var(--teal);
     height: 2px;
-    width: 150%;
+    width: 130%;
     translate: 0 0.9rem;
 }
 
