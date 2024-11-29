@@ -541,7 +541,8 @@ nav p {
     flex-direction: column;
     text-align: center;
     background-color: white;
-    width: 20rem;
+    min-width: 20rem;
+    width: 90%;
     min-height: 10rem;
     border-radius: 1rem;
     border: 1px solid black;
@@ -584,6 +585,60 @@ nav p {
 
 .ambulan-btn:active {
     transform: scale(0.9);
+}
+
+.alur {
+    display: none;
+    padding: 1rem;
+    padding-top: 2rem;
+    display:flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    min-width: 20rem;
+    width: 90%;
+    border-radius: 1rem;
+    gap: 1rem;
+    background-color: white;
+    color: white;
+    font-size: 0.8rem;
+    border: .5px solid black;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.alur h1 {
+    color: var(--teal);
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 1rem;
+}
+
+
+.alur-card {
+    padding: 0.7rem;
+    display :flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    min-height: 10vh;
+    width: 85%;
+    background-color: #257180;
+    border-radius: 10px;
+}
+
+.closealur {
+    position: absolute;
+    background-color: rgba(210, 210, 210, 0.726);
+    top: 5px;
+    right: 5px;
+    width: 35px;
+    height: 35px;
+    padding: 7px;
+    border-radius: 100%;
 }
 
 /* KONTAK DKM */
@@ -749,7 +804,7 @@ p.copyright {
     }
 
     .ul a:active {
-        transform: scale(0.8);
+        transform: scale(0.9);
         color: blue;
         transition: ease-in-out.3s;
     }
@@ -841,6 +896,15 @@ p.copyright {
     .closekas {
         top: 0;
     }
+
+    .card {
+        max-width: 40%;
+        min-height: 13rem;
+    }
+
+    .alur {
+        width: 90%;
+    }
 }
 
 
@@ -872,7 +936,7 @@ p.copyright {
 
     .ul {
         padding-top: 1rem;
-        gap: 1.5rem;
+        gap: 1.2rem;
         width: 120%;
     }
 
@@ -888,7 +952,7 @@ p.copyright {
 
     .ul a:hover {
         text-decoration: none;
-        transform: scale(1.05);
+        transform: scale(1.025);
         color:blue;
         border-radius: 10px;
         transition: ease-in-out .25s;
@@ -905,6 +969,7 @@ p.copyright {
 
     .card {
         min-height: 12rem;
+        max-width: 30%;
     }
 
     .ambulan-btn:hover {
@@ -915,5 +980,14 @@ p.copyright {
 
     .ambulan-btn:active {
         transform: scale(0.9);
+    }
+
+    .alur {
+        width: 90%;
+        font-size: 0.9rem;
+    }
+
+    .alur-card {
+        padding: 1.5rem;
     }
 }
