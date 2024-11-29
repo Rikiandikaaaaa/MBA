@@ -58,9 +58,21 @@ closekas.addEventListener("click", function() {
     kas.style.display = "none"
 })
 
+let closealur = document.querySelector (".closealur")
+let openalur = document.querySelector (".ambulan-btn")
+let alur = document.querySelector (".alur")
+
+openalur.addEventListener ("click", function () {
+    alur.style.display = "flex"
+})
+
+closealur.addEventListener ("click", function () {
+    alur.style.display = "none"
+})
+
 
 // Set the date we're counting down to
-let countDownDate = new Date("Feb 28 2025 23:37:25").getTime();
+let countDownDate = new Date("Mar 1 2025 00:00:00").getTime();
 
 // Update the count down every 1 second
 let x = setInterval(function() {
