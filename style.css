@@ -21,12 +21,12 @@ body {
 }
 
 .background {
-    background-color: #F8F8F8;
+    background-color:#ffffff;
     padding: 0;
 }
 
 :root {
-    --teal: #257180;
+    --teal: #08727D;
 }
 
 section {
@@ -76,7 +76,7 @@ nav {
     align-items: center;
     width: 100%;
     height: 45px;
-    background-color: #f9f9f9;
+    background-color: #FFF;
     top: 0;
     color: black;
     box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.75);
@@ -163,7 +163,7 @@ nav p {
     justify-content: flex-start;
     height: 100vh;
     translate: 0 45px;
-    background-color: #F9F9F9;
+    background-color: #FFF;
     width: 60%;
     padding: 1rem;
     z-index: 998;
@@ -384,12 +384,21 @@ nav p {
 
 .jadwal {
     display: flex;
-    align-items: center;
+    width: 80%;
     justify-content: center;
-    width: 90%;
-    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
-    -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+    align-items: center;
+    border-radius: 20px;
+    
+
+}
+
+.widget {
+    width: 100%;
+    height: 537px;
+    border-radius: 20px;
+    box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.75);
 }
 
 /* INFAQ */
@@ -540,13 +549,14 @@ nav p {
     align-items: center;
     flex-direction: column;
     text-align: center;
-    background-color: white;
+    background-color:;
     min-width: 20rem;
     width: 90%;
     min-height: 10rem;
     border-radius: 1rem;
     border: 1px solid black;
     padding: 1rem;
+    font-size: 1rem;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
@@ -557,11 +567,6 @@ nav p {
     font-size: 1.2rem;
     font-weight: 600;
     margin-bottom: 1rem;
-}
-
-.card p {
-    color: black;
-    font-size: 1rem;
 }
 
 .ambulan-btn {
@@ -601,7 +606,7 @@ nav p {
     width: 90%;
     border-radius: 1rem;
     gap: 1rem;
-    background-color: white;
+    background-color: --card;
     color: white;
     font-size: 0.8rem;
     border: .5px solid black;
@@ -645,7 +650,7 @@ nav p {
 
 table {
     width: 80%;
-    background-color: white;
+    background-color: var(--card);
     border: 1px solid black;
     margin-bottom: 2rem;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
@@ -671,7 +676,7 @@ td {
     justify-content: center;
     align-items: center;
     padding-top: 2rem;
-    background-color: white;
+    background-color: var(--card);
     border-top: 1px solid black;
 }
 
@@ -773,7 +778,7 @@ p.copyright {
         left: 0;
         width: 20%;
         height: 93svh;
-        background-color: #f9f9f9;
+        background-color: var(--card);
         border: none;
         z-index: 1;
         translate: 0 7svh;
