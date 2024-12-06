@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Masjid Baitul 'Amal</title>
     <link rel="icon" type="image/x-icon" href="images/logo.png">
-    
+
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
     <link href="style.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,9 +29,55 @@
     <div class="background">
 
         <!-- NAVBAR -->
-        <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary">
+
+        <nav>
+                <div class="brand">
+                    <img src="images/logo.png" />
+                    <p>Masjid <br>Baitul 'Amal</p>
+                </div>
+
+                <img class="navbar-toggler" id="toggler" src="images/menu.png" />
+                <img class="close navbar-toggler" src="images/close.png">
+
+            <div class="navopen" id="navbar">
+                <ul class="navbar-nav animate__animated animate__fadeInDown">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" aria-current="page" href="#">
+                            Beranda
+                        </a>
+                        <ul class="dropdown-menu animate__animated animate__fadeInDown">
+                            <li><a class="dropdown-item" href="#">Profil</a></li>
+                            <li><a class="dropdown-item" href="#kegiatan">Kegiatan</a></li>
+                            <li><a class="dropdown-item" href="#infaq">Keuangan</a></li>
+                            <li><a class="dropdown-item" href="#layanan">Fasilitas</a></li>
+                            <li><a class="dropdown-item" href="#table">Kontak DKM</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.instagram.com/masjidbaitulamalbatamcentre/">Agenda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Galeri</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.youtube.com/@baitulamaltv">Kajian</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                            href="https://drive.google.com/file/d/1xfbcB8f7rOqXOOrx32kCZR6VUqXvzHFS/view?usp=sharing">Struktur</a>
+                    </li>
+                    
+                </ul>
+
+            </div>
+        </nav>
+
+        <!-- NAVBAR -->
+        <!-- <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#"><img src="images/logo.png" width="18%" height="auto"/>
+              <a class="navbar-brand" href="#"><img src="images/logo.png" />
                 <p>Masjid Baitul 'Amal</p></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -64,23 +110,24 @@
                 </ul>
               </div>
             </div>
-          </nav>
+          </nav> -->
 
         <!-- HOME -->
-        
 
-            <section class="profil" id="profil">
-                <img src="images/logo.png" />
-                <h1 class="judul">Profil Masjid</h1>
-                <p>Masjid Baitul 'Amal merupakan masjid yang terletak di tengah-tengah pemukiman dan merupakan pusat
-                    ibadah
-                    umat muslim di Perumahan Taman Marchelia.Letaknya yang strategis membuat Masjid ini selalu ramai
-                    dikunjungi jamaah baik dari dalam maupun luar perumahan.</p>
-                <h1 class="judul">Alamat Majid</h1>
-                <p>Perumahan Taman Marchelia Blok B Kel. Taman Baloi Kec. Batam Kota, Kota Batam, Kepulauan Riau (29432).</p>
-            </section>
 
-            <section class="homepage animate__animated animate__fadeIn">
+        <section class="profil" id="profil">
+            <img src="images/logo.png" />
+            <h1 class="judul">Profil Masjid</h1>
+            <p>Masjid Baitul 'Amal merupakan masjid yang terletak di tengah-tengah pemukiman dan merupakan pusat
+                ibadah
+                umat muslim di Perumahan Taman Marchelia.Letaknya yang strategis membuat Masjid ini selalu ramai
+                dikunjungi jamaah baik dari dalam maupun luar perumahan.</p>
+            <h1 class="judul">Alamat Majid</h1>
+            <p>Perumahan Taman Marchelia Blok B Kel. Taman Baloi Kec. Batam Kota, Kota Batam, Kepulauan Riau (29432).
+            </p>
+        </section>
+
+        <section class="homepage animate__animated animate__fadeIn">
 
             <div class="countdown">
 
@@ -88,7 +135,8 @@
                     <div style="left:0; width:100%; height:0; position:relative; padding-bottom:25%; margin:0 auto">
                         <iframe src="https://www.tickcounter.com/widget/countdown/6245788"
                             style="top:0; left:0; width:100%; height:100%; position:absolute; border:0; overflow:hidden"
-                            title="Menuju Bulan Ramadhan Dalam :"></iframe></div>
+                            title="Menuju Bulan Ramadhan Dalam :"></iframe>
+                    </div>
                 </div>
 
                 <div class="maps"><iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0"
@@ -205,10 +253,10 @@
                 </div>
                 <img src="images/qris.jpg" class="qris">
             </div>
-                <!-- <img src="images/laporan.jpg" class="kas" style="height: auto;"> -->
-                <a href="https://drive.google.com/file/d/1iB0y99sW5soNm8ceVO3CWfdFGEDKGp-K/view?usp=drive_link"
+            <!-- <img src="images/laporan.jpg" class="kas" style="height: auto;"> -->
+            <a href="https://drive.google.com/file/d/1iB0y99sW5soNm8ceVO3CWfdFGEDKGp-K/view?usp=drive_link"
                 class="kas-btn">Laporan Keuangan</a>
-                
+
         </section>
 
 
@@ -282,7 +330,8 @@
 
                 <div class="keterangan">
                     <h1 style="text-align: center;">Lantai 2</h1>
-                    <p>Ruang Sholat cadangan yang bisa digunakan apabila Lantai utama tidak mampu menanmpung kapasitas jamaah yang datang.Biasanya digunakan untuk shaf wanita.</p>
+                    <p>Ruang Sholat cadangan yang bisa digunakan apabila Lantai utama tidak mampu menanmpung kapasitas
+                        jamaah yang datang.Biasanya digunakan untuk shaf wanita.</p>
                 </div>
 
                 <img src="images/lantai2.jpg" alt="" width="30%" height="auto">
