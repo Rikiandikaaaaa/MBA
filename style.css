@@ -117,7 +117,7 @@ section {
     justify-content: flex-start;
     align-items: center;
     text-align: center;
-    width: 50%;
+    width: 70%;
     height: 100svh;
     padding-top: 1rem;
     gap: .8rem;
@@ -127,6 +127,7 @@ section {
 }
 
 .dropdown-menu {
+    padding-top: 1rem;
     border: none;
     width: 150px;
     height: max-content;
