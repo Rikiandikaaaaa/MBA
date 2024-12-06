@@ -122,12 +122,17 @@ section {
     padding-top: 1rem;
     gap: .8rem;
     float: right;
-    translate: 1rem 2.75rem;
+    translate: 1rem 3.53rem;
     z-index: 1;
 }
 
+.nav-link:active {
+    transform: scale(0.85);
+    transition: ease-in-out .2s;
+}
+
 .dropdown-menu {
-    padding-top: 1rem;
+    padding-top: 1.5rem;
     border: none;
     width: 150px;
     height: max-content;
