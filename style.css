@@ -87,7 +87,7 @@ section {
 }
 
 .navbar-brand {
-    margin-left: 1rem;
+    left: 3rem;
     position: absolute;
     display: flex;
     align-items: center;
@@ -95,7 +95,7 @@ section {
     width: 30%;
     height: 8svh;
     gap: 1rem;
-    top: 7px;;
+    top: 7px;
 }
 
 .navbar-brand p {
@@ -321,10 +321,13 @@ section {
     border-radius: 10px;
     transition: ease-in-out .2s;
     gap: 2rem;
+    box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.75);
 }
 
 .kas-btn:active {
-    transform: scale(.95);
+    transform: scale(0.9);
 }
 
 
@@ -528,6 +531,8 @@ p.copyright {
         width: 30%;
         gap: 1rem;
         z-index: 9;
+        left: 1rem;
+        top: 0;
     }
 
     .navbar-brand img {
@@ -548,7 +553,7 @@ p.copyright {
         margin-right: 2rem;
         height: 12svh;
         translate: none;
-        
+
     }
 
     .nav-item {
@@ -579,13 +584,13 @@ p.copyright {
         width: 200px;
         translate: -3rem .63rem;
         text-align: center;
-        
+
     }
 
     .dropdown-item {
         padding: 1rem;
-        background-color:white;
-        color:gray;
+        background-color: white;
+        color: gray;
         translate: none;
     }
 
@@ -739,6 +744,9 @@ p.copyright {
         background-color: var(--teal);
         border-radius: 10px;
         transition: ease-in-out .2s;
+        box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.75);
     }
 
     .kas-btn:hover {
