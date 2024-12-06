@@ -71,7 +71,7 @@ section {
 
 .navbar {
     background-color: white !important;
-    height: 8svh;
+    height: 10svh;
     box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.75);
@@ -80,13 +80,14 @@ section {
 
 .navbar-toggler {
     position: absolute;
-    scale: 0.8;
-    right: 5px;
-    top: 5px;
+    scale: 1;
+    right: 1rem;
+    top: 11px;
     border: none;
 }
 
 .navbar-brand {
+    margin-left: 1rem;
     position: absolute;
     display: flex;
     align-items: center;
@@ -94,8 +95,7 @@ section {
     width: 30%;
     height: 8svh;
     gap: 1rem;
-    top: 0;
-    left: 1rem;
+    top: 7px;;
 }
 
 .navbar-brand p {
@@ -128,7 +128,7 @@ section {
 
 .dropdown-menu {
     border: none;
-    width: 230px;
+    width: 150px;
     height: max-content;
     text-align: center;
 }
@@ -136,7 +136,6 @@ section {
 .dropdown-item {
     padding: 0.6rem;
     color: var(--teal);
-    background-color: rgb(249, 249, 249);
 }
 
 /* HOME */
@@ -149,15 +148,16 @@ section {
 }
 
 .homepage {
-    padding-top: 4rem;
-    background-color:rgb(10, 29, 29);
+    background-image: ;
+    background-position: center;
+    background-size: cover;
     padding: 1rem;
 }
 
 .profil {
     height: 100svh;
     padding-top: 4rem;
-    background-image: url(images/wallpaper.jpg);
+    background-image: url(images/wallpaper2.jpg);
     background-position: center;
     background-size: cover;
     color: white;
