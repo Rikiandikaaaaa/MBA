@@ -20,7 +20,6 @@ close.addEventListener("click", function () {
     close.style.display = ("none")
     toggler.style.display = ("block")
     dropdownMenu.style.display = ("none")
-    
 })
 
 dropdown.addEventListener("click", function (e) {
@@ -31,7 +30,13 @@ dropdown.addEventListener("click", function (e) {
         dropdownMenu.style.display = ("none")
     }
 })
+   
+dropdown.addEventListener("click", function (e) {
+    if (e.classList = "dropdown-item" && innerWidth > 900) {
+        dropdownMenu.style.display = ("none")
+    }
+})
 
 dropdownToggle.addEventListener ("click", function() {
-    dropdownMenu.style.display = ("block")
+    dropdownMenu.style.display = ("flex")
 })
