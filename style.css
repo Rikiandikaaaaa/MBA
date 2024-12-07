@@ -178,7 +178,7 @@ nav {
 }
 
 .profil {
-    height: 100svh;
+    min-height: 100svh;
     padding-top: 7rem;
     background-image: url(images/wallpaper2.jpg);
     background-position: center;
@@ -675,7 +675,7 @@ p.copyright {
         background-position: center;
         background-size: cover;
         color: white;
-        height: 110svh;
+        min-height: 100svh;
     }
 
     .profil img {
