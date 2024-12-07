@@ -19,6 +19,7 @@ close.addEventListener("click", function () {
     navbar.style.display = ("none")
     close.style.display = ("none")
     toggler.style.display = ("block")
+    dropdownMenu.style.display = ("none")
     
 })
 
