@@ -770,12 +770,9 @@ p.copyright {
     }
 
     .fasilitas img {
-        width: 35%;
+        width: 40%;
         height: auto;
         border-radius: 20px;
-        box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
-        -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
-        -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
     }
 
     .fasilitas h1 {
