@@ -53,8 +53,8 @@
             font-size: 1.2rem;
         }
 
-        .text {
-            width: 60%;
+        .content p {
+            width:60%;
         }
 
         .mba {
@@ -78,43 +78,36 @@
         }
 
         .heading {
+            margin-top: 10rem;
             font-size: 3rem;
             color: var(--color);
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin-bottom: 1rem;
         }
 
-        .nav {
-            padding-left: 3rem;
-            position: absolute;
-            width: 100%;
-            display: flex;
-            bottom: 3rem;
-            right: 0;
-        }
-
-        .nav a {
+        a {
+            margin-top: 2rem;
             text-decoration: none;
-            color: rgba(255, 255, 255, 0.753);
+            color: rgba(255, 255, 255, 0.865);
             padding: 0.7rem 1rem 0.7rem 1rem;
-            width: 10%;
+            width: 20%;
             border-radius: 10px;
             text-align: center;
             margin-right: 1rem;
-            font-size: 1.1rem;
+            font-size: 1.3rem;
             transition: ease-in-out .2s;
             background-color: rgba(255, 255, 255, 0.055);
         }
 
-        .nav a:hover {
+        a:hover {
             color: var(--color);
             background-color: rgba(255, 255, 255, 0.121);
-            transform: translateY(-0.5rem);
             box-shadow: 0px 0px 0px 2px rgba(219, 188, 135, 0.75);
             -webkit-box-shadow: 0px 0px 0px 2px rgba(219, 188, 135, 0.75);
             -moz-box-shadow: 0px 0px 0px 2px rgba(219, 188, 135, 0.75);
         }
 
-        .nav a:active {
+        a:active {
             transform: scale(.95);
         }
 
@@ -128,27 +121,20 @@
 
             .content {
                 width: 100%;
-                padding:1.5rem;
+                padding: 1.5rem;
                 flex-wrap: wrap;
-                overflow: hidden;
-            }
-
-            .text {
-                width: 90%;
-                position: absolute;
-                top: 10rem;
             }
 
             .heading {
-                font-size: 1.3rem;
+                margin-top: 5rem;
+                font-size: 1.2rem;
             }
 
-            .text p {
-                padding-top: 1rem;
-                font-size: 1rem;
+            .content p {
+                font-size:0.9rem;
+                width: 90%;
             }
 
-          
             .mba {
                 font-size: 1.2rem;
                 translate: 3.5rem;
@@ -160,22 +146,10 @@
                 translate: -4rem -0.7rem;
             }
 
-            .nav {
-                padding: 1rem;
-                flex-wrap: wrap;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                gap: 0.8rem;
-                width: 100%;
-            }
-
-            .nav a {
+            a {
                 font-size: 1rem;
-                width: 95%;
+                width: 30%;
                 margin-right: 0;
-                color: white;
-                background-color: rgba(255, 255, 255, 0.055);
             }
         }
     </style>
@@ -191,21 +165,13 @@
         </video>
         <div class="content animate__animated animate__fadeIn">
             <h1 class="mba animate__animated animate__fadeInLeft">Masjid Baitul 'Amal</h1>
-            <div class="text">
-            <h1 class="heading">Selamat datang di beranda
-                <br>Masjid Baitul 'Amal, Batam
-            </h1>
-            <p>Website ini dibuat sebagai pusat informasi terupdate seputar Masjid Baitul 'Amal, mulai dari agenda
-                terkini hingga laporan keuangan yang disampaikan secara terbuka dan transparant.</p>
-            </div>
+                <h1 class="heading">Selamat datang di beranda
+                    <br>Masjid Baitul 'Amal, Batam
+                </h1>
+                <p>Website ini dibuat sebagai pusat informasi terupdate seputar Masjid Baitul 'Amal, mulai dari agenda
+                    terkini hingga laporan keuangan yang disampaikan secara terbuka dan transparant.</p>
 
-            <div class="nav">
-                <a href="index2.html">Beranda</a>
-                <a href="">Agenda</a>
-                <a href="">Kajian</a>
-                <a href="">Galeri</a>
-                <a href="">Struktur</a>
-            </div>
+            <a href="index2.html">Beranda</a>
 
 
         </div>
